@@ -1,5 +1,5 @@
 FROM node:alpine
 
-RUN npm config set cache /tmp/npm-cache && \
-    apk add git
+RUN apk update && apk upgrade && apk add --no-cache git && \
+    npm config set cache /tmp/npm-cache
 
